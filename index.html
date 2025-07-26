@@ -8,6 +8,7 @@
 </head>
 <body>
     <header>
+        <img src="img/Banner-3.png" alt="Imagen representativa" style="width: 100%; max-height: 500px; object-fit: cover;">
         <h1>Arquitecta & Abogada – Gestión Inmobiliaria Integral</h1>
         <p class="sub">Somos dos profesionales que se unieron para entregar un servicio completo, cercano y personalizado, adaptado a todas tus necesidades inmobiliarias.</p>
         <blockquote>“Del plano al contrato, te acompañamos en cada paso”</blockquote>
@@ -29,12 +30,29 @@
     </section>
 
     <section>
-        <h2>Contacto</h2>
-        <p>Contáctanos a: contacto@ejemplo.cl</p>
+        <h2>Formulario de Cotización</h2>
+        <p>Te contactaremos a la brevedad</p>
+
+        <form action="https://formsubmit.co/gestionvisionurbana@gmail.com" method="POST" class="cotizacion-form">
+            <input type="text" name="name" placeholder="Nombre" required>
+            <input type="email" name="email" placeholder="Correo" required>
+            <input type="tel" name="phone" placeholder="Teléfono" required>
+            <textarea name="message" placeholder="Cuéntanos tu caso" required></textarea>
+
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://Mawoccold.github.io/gestion-vision-urbana/gracias.html">
+
+            <button type="submit">Solicitar una cotización</button>
+        </form>
     </section>
 
+    <!-- <section>
+        <h2>Contacto</h2>
+        <p>Contáctanos a: gestionvisionurbana@gmail.com</p>
+    </section> -->
+
     <footer>
-        <p>© 2025 Arquitecta & Abogada</p>
+        <p>© 2025 Gestión Vision Urbana</p>
     </footer>
 </body>
 </html>
