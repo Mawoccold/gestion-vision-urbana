@@ -7,8 +7,8 @@ body {
     color: #333;
 }
 header {
-    background-color: #DEB887;
-    color: #A0522D;
+    background-color: #004aad;
+    color: #f4f1cb;
     padding: 2rem;
     text-align: center;
 }
@@ -17,9 +17,11 @@ header .sub {
     margin-top: 0.5rem;
 }
 blockquote {
-    font-style: italic;
-    color: #ffeaa7;
-    margin: 1rem 0;
+    font-style: "Nata Sans", sans-serif;
+    font-weight: bold;
+    color: #e8bf44;
+    text-align: center;
+    margin: center 0;
 }
 section {
     padding: 2rem;
@@ -30,7 +32,9 @@ footer {
     text-align: center;
     padding: 1rem;
 }
-
+.especial {
+  list-style-type: disc; /* Otros: circle, disc, none, etc. */
+}
 /* ESTILO PARA EL FORMULARIO DE CONTACTO*/
 
 .cotizacion-form {
@@ -68,3 +72,124 @@ footer {
 .cotizacion-form button:hover {
   background-color: #e08700;
 }
+
+/* ESTILO PARA LOS SERVICIOS DESPLEGABLES*/
+
+.contenedor {
+  display: flex;
+  border-radius: 8px;
+  padding: 10px;
+  max-width: 100%;
+}
+
+.texto {
+  width: 50%;
+}
+
+/* Quitar numerito "1." si está dentro de una <li> */
+li > .contenedor {
+  list-style: none;
+}
+
+
+details {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 10px 0;
+  border: 3px solid #261935;
+  border-radius: 5px;
+  max-width: 80%;
+  background-color: #91d5ff;
+  color:#221a44;
+  box-shadow: 6px 6px 15px rgb(93, 77, 107);
+}
+
+summary {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #221a44;
+  padding: 10px 15px;
+  border-radius: 1px;
+  cursor: pointer;
+  list-style: none;
+  transition: background-color 0.3s ease;
+  /* transition: color 0.3s ease; */
+}
+
+summary:hover {
+  border: 3px transparent #fcff30;
+  color: #f9f9f9;
+  background-color: #004aad;
+}
+
+details[open] summary {
+  background-color: #41467a; /* color al estar abierto */
+  color: #f9f9f9;
+}
+
+details p {
+  padding: 10px;
+  margin: 0;
+}
+
+summary .icon {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  margin-right: 5px;
+}
+
+details[open] .icon {
+  transform: rotate(90deg);
+}
+
+.img-servicio {
+  width: 80%;
+  max-height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+/* 
+
+| Propiedad          | Función                              | Ejemplo                          |
+| ------------------ | ------------------------------------ | -------------------------------- |
+| `color`            | Color del texto                      | `color: red;`                    |
+| `background-color` | Color de fondo                       | `background-color: #f0f0f0;`     |
+| `border`           | Borde (ancho, tipo, color)           | `border: 2px solid black;`       |
+| `border-radius`    | Bordes redondeados                   | `border-radius: 10px;`           |
+| `box-shadow`       | Sombra alrededor de cajas o imágenes | `box-shadow: 4px 4px 10px gray;` |
+| `opacity`          | Opacidad/transparencia               | `opacity: 0.5;`                  |
+
+
+| Propiedad         | Función                        | Ejemplo                               |
+| ----------------- | ------------------------------ | ------------------------------------- |
+| `font-size`       | Tamaño del texto               | `font-size: 16px;`                    |
+| `font-family`     | Tipo de fuente                 | `font-family: 'Poppins', sans-serif;` |
+| `font-weight`     | Grosor del texto               | `font-weight: bold;`                  |
+| `text-align`      | Alineación del texto           | `text-align: center;`                 |
+| `text-decoration` | Decoraciones (subrayado, etc.) | `text-decoration: none;`              |
+| `line-height`     | Espacio entre líneas           | `line-height: 1.5;`                   |
+
+| Propiedad   | Función                            | Ejemplo              |
+| ----------- | ---------------------------------- | -------------------- |
+| `width`     | Ancho del elemento                 | `width: 300px;`      |
+| `height`    | Alto del elemento                  | `height: 200px;`     |
+| `max-width` | Ancho máximo                       | `max-width: 100%;`   |
+| `padding`   | Espacio interno (dentro del borde) | `padding: 10px;`     |
+| `margin`    | Espacio externo (fuera del borde)  | `margin: 20px auto;` |
+
+| Propiedad                         | Función                                  | Ejemplo                    |
+| --------------------------------- | ---------------------------------------- | -------------------------- |
+| `display`                         | Tipo de caja (block, inline, flex, etc.) | `display: flex;`           |
+| `position`                        | Posición (relative, absolute, etc.)      | `position: absolute;`      |
+| `top/right/...`                   | Coordenadas si usas `position`           | `top: 10px; left: 5px;`    |
+| `float`                           | Alinear a la izquierda o derecha         | `float: left;`             |
+| `text-align`                      | Alineación horizontal del texto          | `text-align: center;`      |
+| `align-items` / `justify-content` | Centrado en flexbox                      | `justify-content: center;` |
+
+| Propiedad              | Función                            | Ejemplo                             |
+| ---------------------- | ---------------------------------- | ----------------------------------- |
+| `cursor`               | Tipo de cursor al pasar por encima | `cursor: pointer;`                  |
+| `transition`           | Animación suave al cambiar valores | `transition: all 0.3s ease;`        |
+| `hover` (pseudo-clase) | Estilo al pasar el mouse           | `button:hover { background: red; }` |
+*/
