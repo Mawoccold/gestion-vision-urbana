@@ -7,8 +7,8 @@ body {
     color: #111;
 }
 header {
-    padding-left: 14rem;
-    padding-right: 14rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     text-align: center;
 }
 header .sub {
@@ -23,8 +23,8 @@ blockquote {
 }
 section {
     font-size: 1.2rem;
-    padding-left: 14rem;
-    padding-right: 14rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     padding-bottom: 4rem;
     text-align: center;
 }
@@ -36,6 +36,12 @@ footer {
     color: white;
     text-align: center;
     padding: 1rem;
+}
+@media (min-width: 1024px) {
+    header, section {
+        padding-left: 14rem;
+        padding-right: 14rem;
+    }
 }
 
 /* ESTILO PARA LOS SERVICIOS */
