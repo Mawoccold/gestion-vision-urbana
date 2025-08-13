@@ -7,10 +7,8 @@ body {
     color: #111;
 }
 header {
-    background-color: #e0e0d4;
-    color: #111;
-    padding-left: 15rem;
-    padding-right: 15rem;
+    padding-left: 14rem;
+    padding-right: 14rem;
     text-align: center;
 }
 header .sub {
@@ -18,17 +16,20 @@ header .sub {
 }
 header .title {
     font-size: 2rem;
-    text-align: center;
 }
 blockquote {
-    font-style: "Nata Sans", sans-serif;
-    font-weight: bold;
-    color: #111;
-    text-align: center;
-    margin: center 0;
+    font-style: italic;
+    font-size: 1.4rem;
 }
 section {
-    padding: 2rem;
+    font-size: 1.2rem;
+    padding-left: 14rem;
+    padding-right: 14rem;
+    padding-bottom: 4rem;
+    text-align: center;
+}
+section .title {
+  font-size: 2rem
 }
 footer {
     background-color: #2d3436;
@@ -36,9 +37,31 @@ footer {
     text-align: center;
     padding: 1rem;
 }
-.especial {
-  list-style-type: disc; /* Otros: circle, disc, none, etc. */
-}
+
+/* ESTILO PARA LOS SERVICIOS */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ESTILO PARA EL FORMULARIO DE CONTACTO*/
 
 .cotizacion-form {
@@ -55,6 +78,7 @@ footer {
 
 .cotizacion-form input,
 .cotizacion-form textarea {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   padding: 1rem;
   border: none;
   border-radius: 1rem;
@@ -63,143 +87,21 @@ footer {
 }
 
 .cotizacion-form button {
-  background-color: #ffa502;
-  color: white;
-  font-weight: bold;
-  border: none;
+  font-size: 1.1rem;
+  background-color: #b1a16c;
+  color: #111;
   border-radius: 2rem;
   padding: 1rem;
+  border: 5px dotted rgb(87, 78, 49);
   cursor: pointer;
   transition: background 0.3s ease;
 }
 
 .cotizacion-form button:hover {
-  background-color: #e08700;
+  background-color: #938555;
 }
 
-/* ESTILO PARA LOS SERVICIOS DESPLEGABLES*/
-
-.contenedor {
-  display: flex;
-  border-radius: 8px;
-  padding: 10px;
-  max-width: 100%;
-}
-
-.texto {
-  width: 50%;
-}
-
-/* Quitar numerito "1." si está dentro de una <li> */
-li > .contenedor {
-  list-style: none;
-}
-
-
-details {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  margin: 10px 0;
-  border: 3px solid #261935;
-  border-radius: 5px;
-  max-width: 80%;
-  background-color: #91d5ff;
-  color:#221a44;
-  box-shadow: 6px 6px 15px rgb(93, 77, 107);
-}
-
-summary {
-  font-weight: bold;
-  font-size: 1.1em;
-  color: #221a44;
-  padding: 10px 15px;
-  border-radius: 1px;
-  cursor: pointer;
-  list-style: none;
-  transition: background-color 0.3s ease;
-  /* transition: color 0.3s ease; */
-}
-
-summary:hover {
-  border: 3px transparent #fcff30;
-  color: #f9f9f9;
-  background-color: #004aad;
-}
-
-details[open] summary {
-  background-color: #41467a; /* color al estar abierto */
-  color: #f9f9f9;
-}
-
-details p {
-  padding: 10px;
-  margin: 0;
-}
-
-summary .icon {
-  display: inline-block;
-  transition: transform 0.3s ease;
-  margin-right: 5px;
-}
-
-details[open] .icon {
-  transform: rotate(90deg);
-}
-
-.img-servicio {
-  width: 80%;
-  max-height: auto;
-  border-radius: 8px;
-  object-fit: cover;
-  display: block;
-  margin: 0 auto;
-}
 /*--------------------------------------------------------*/
-.servicios-container {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap; /* para que se adapte en pantallas pequeñas */
-}
-
-.servicio {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 3px dotted #b0ab96;
-  overflow: hidden;
-  width: 250px;
-  background: #fff;
-}
-
-.servicio img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.servicio-btn {
-  background: #e2ddb5;
-  color: black;
-  padding: 12px;
-  border: none;
-  width: 100%;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.servicio-btn:hover {
-  background: #807668;
-}
-
-.info {
-  display: none;
-  padding: 10px;
-  font-size: 14px;
-}
-
-.servicio.active .info {
-  display: block;
-}
 
 /*
 | Propiedad          | Función                              | Ejemplo                          |
