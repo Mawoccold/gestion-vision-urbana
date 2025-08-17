@@ -48,12 +48,13 @@ footer {
     gap: 20px;
     justify-content: center;
     align-items: flex-start;
+    flex-wrap: wrap; /* Añade esto para mejor manejo responsivo */
 }
 
 .item{
     border: 4px dotted rgb(181, 175, 155);
-    margin: 4rem;
-    flex: 1;
+    margin: 1rem;
+    flex: 1 1 300px;
     max-width: 30%;
     max-height: 20%;
     background-color: #c5c5ae;
@@ -82,8 +83,8 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .contenedor {
-        flex-direction: column; /* pasa de horizontal → vertical */
+    .container {
+        flex-direction: column;
     }
 }
 
