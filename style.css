@@ -48,28 +48,40 @@ footer {
     gap: 20px;
     justify-content: center;
     align-items: flex-start;
-    flex-wrap: wrap; /* Añade esto para mejor manejo responsivo */
+    padding: 0 2rem;
 }
 
 .item{
     border: 4px dotted rgb(181, 175, 155);
-    margin: 1rem;
-    flex: 1 1 300px;
+    margin: 2rem 1rem; /* Margen vertical más grande que horizontal */
+    flex: 1;
     max-width: 30%;
-    max-height: 20%;
+    min-width: 300px; /* Ancho mínimo para mantener legibilidad */
     background-color: #c5c5ae;
+    box-sizing: border-box;
+    transition: transform 0.3s ease; /* Efecto hover opcional */
 }
+.item:hover {  /*Hace que los items se levanten cuando pase el cursor por arriba*/
+    transform: translateY(-5px); /* Efecto hover opcional */
+}
+
 .item img{
     width: 100%;
     height: 200px;
     display: block;
+    object-fit: cover; /* Para que las imágenes mantengan proporción */
 }
 .item summary{
     text-align: center;
     font-size: 1.2rem;
     padding: 1rem;
     cursor: pointer;
-    list-style:none;
+    list-style: none;
+}
+.item p {
+    padding: 0 1rem 1rem;
+    text-align: justify;
+    margin: 0;
 }
 
 /* -------------------- RESPONSIVE PADDING -------------------- */
@@ -82,9 +94,29 @@ footer {
     }
 }
 
+/* Móviles en general */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 0 1rem; /* Menos padding en móviles */
+    }
+
+    .item {
+        max-width: 100%; /* Ocupa todo el ancho disponible */
+        min-width: unset; /* Elimina el mínimo de 300px */
+        width: 100%; /* Asegura que ocupe todo el contenedor */
+        margin: 0.5rem 0; /* Menos margen vertical */
+    }
+
+    .item img {
+        height: 150px; /* Altura ligeramente menor para móviles */
+    }
+
+    .item summary {
+        padding: 0.8rem; /* Padding ligeramente menor */
+        font-size: 1.1rem; /* Tamaño de fuente ligeramente menor */
     }
 }
 
