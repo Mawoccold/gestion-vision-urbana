@@ -26,8 +26,8 @@ blockquote {
 
 section {
     font-size: 1.2rem;
-    padding-bottom: 4rem;
     text-align: center;
+    padding-top:1rem
 }
 
 section .title {
