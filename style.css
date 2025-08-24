@@ -41,6 +41,12 @@ footer {
     padding: 1rem;
 }
 
+a img {
+    max-width: 50px;
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+
 /*----------------------- SERVICIOS -----------------------*/
 
 .container {
