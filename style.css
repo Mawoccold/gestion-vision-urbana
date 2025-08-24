@@ -115,8 +115,8 @@ footer {
     }
 
     .item summary {
-        padding: 2rem; /* Padding ligeramente menor */
-        font-size: 1.2rem; /* Tamaño de fuente ligeramente menor */
+        padding: 1.5rem; /* Padding ligeramente menor */
+        font-size: 1.3rem; /* Tamaño de fuente ligeramente menor */
     }
 }
 
