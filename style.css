@@ -48,6 +48,8 @@ a img {
     padding-left: 2rem;
 }
 
+
+
 /*----------------------- SERVICIOS -----------------------*/
 
 .container {
@@ -64,7 +66,7 @@ a img {
     flex: 1;
     max-width: 30%;
     min-width: 300px; /* Ancho mínimo para mantener legibilidad */
-    background-color: #c5c5ae;
+    background-color: whitesmoke;
     box-sizing: border-box;
     transition: transform 0.3s ease; /* Efecto hover opcional */
 }
