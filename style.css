@@ -48,7 +48,24 @@ a img {
     padding-left: 2rem;
 }
 
+/*----------------------- IMAGENES -----------------------*/
 
+.banner {
+    width: 80%;
+    max-height: 400px;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+    border-radius: 10%;
+}
+
+.pre-service {
+    width: 80%;
+    max-height: 300px;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+}
 
 /*----------------------- SERVICIOS -----------------------*/
 
@@ -104,7 +121,7 @@ a img {
 }
 
 /* Móviles en general */
-@media (max-width: 768px) {
+@media (max-width: 770px) {
     .container {
         flex-direction: column;
         align-items: center;
@@ -127,10 +144,16 @@ a img {
         padding: 1.5rem; /* Padding ligeramente menor */
         font-size: 1.3rem; /* Tamaño de fuente ligeramente menor */
     }
+
+    .banner {
+        width: 95%;
+        max-height: 500px;
+        padding-top: 2rem
+    }
 }
 
 /* Tablets y pantallas medianas */
-@media (min-width: 601px) and (max-width: 1023px) {
+@media (min-width: 780px) and (max-width: 1023px) {
     header, section {
         padding-left: 2rem;
         padding-right: 2rem;
