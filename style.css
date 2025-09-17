@@ -83,31 +83,37 @@ a img {
     flex: 1;
     max-width: 30%;
     min-width: 300px; /* Ancho mínimo para mantener legibilidad */
-    background-color: whitesmoke;
+    background-color: white;
     box-sizing: border-box;
+    border-radius: 10px;
     transition: transform 0.3s ease; /* Efecto hover opcional */
-}
-.item:hover {  /*Hace que los items se levanten cuando pase el cursor por arriba*/
-    transform: translateY(-5px); /* Efecto hover opcional */
-}
-
-.item img{
-    width: 100%;
-    height: 200px;
-    display: block;
-    object-fit: cover; /* Para que las imágenes mantengan proporción */
-}
-.item summary{
     text-align: center;
     font-size: 1.2rem;
     padding: 1rem;
     cursor: pointer;
     list-style: none;
 }
+.item:hover {  /*Hace que los items se levanten cuando pase el cursor por arriba*/
+    transform: translateY(-5px); /* Efecto hover opcional */
+}
+
+.item img {
+    width: 100%;
+    height: 200px;
+    display: block;
+    object-fit: cover; /* Para que las imágenes mantengan proporción */
+    border-radius: 10px;
+}
+
 .item p {
     padding: 0 1rem 1rem;
-    text-align: justify;
     margin: 0;
+    text-align: center;
+    font-size: medium;
+}
+
+.item h3 {
+    font-weight: 500;
 }
 
 /* -------------------- RESPONSIVE PADDING -------------------- */
@@ -126,7 +132,7 @@ a img {
         flex-direction: column;
         align-items: center;
         gap: 15px;
-        padding: 0 1rem; /* Menos padding en móviles */
+        padding: 1rem; /* Menos padding en móviles */
     }
 
     .item {
@@ -140,9 +146,9 @@ a img {
         height: 150px; /* Altura ligeramente menor para móviles */
     }
 
-    .item summary {
+    .item {
         padding: 1.5rem; /* Padding ligeramente menor */
-        font-size: 1.3rem; /* Tamaño de fuente ligeramente menor */
+        font-size: 1rem; /* Tamaño de fuente ligeramente menor */
     }
 
     .banner {
