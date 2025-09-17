@@ -213,6 +213,30 @@ a img {
     background-color: whitesmoke;
 }
 
+.cotizacion-form select {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 1rem;
+    border: 2px solid gray;
+    border-radius: 1rem;
+    font-size: 1rem;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+}
+
+/* Estilos para el foco del select */
+.cotizacion-form select:focus {
+    outline: none;
+    border-color: #111
+}
+
+/* Estilos para las opciones */
+.cotizacion-form option {
+    padding: 0.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.cotizacion-form option:hover {
+    background-color: whitesmoke;
+}
 
 /*--------------------------------------------------------*/
 
