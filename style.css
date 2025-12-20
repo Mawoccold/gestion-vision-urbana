@@ -128,6 +128,25 @@ a img {
 
 /* Móviles en general */
 @media (max-width: 770px) {
+
+    .slider {
+        width: 90%;
+    }
+    
+    .slide {
+        padding: 0 10px;
+    }
+    
+    .slide img {
+        max-width: 350px;
+        border-radius: 12px;
+    }
+    
+    .slider::before,
+    .slider::after {
+        width: 40px;
+    }
+
     .container {
         flex-direction: column;
         align-items: center;
@@ -163,6 +182,13 @@ a img {
     header, section {
         padding-left: 2rem;
         padding-right: 2rem;
+    }
+    .slider {
+        width: 75%;
+    }
+    
+    .slide img {
+        max-width: 400px;
     }
 }
 
@@ -213,6 +239,8 @@ a img {
     background-color: whitesmoke;
 }
 
+/*================  SELECCIONAR SERVICIO  ===============*/
+
 .cotizacion-form select {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 1rem;
@@ -222,13 +250,11 @@ a img {
     box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
 }
 
-/* Estilos para el foco del select */
 .cotizacion-form select:focus {
     outline: none;
     border-color: #111
 }
 
-/* Estilos para las opciones */
 .cotizacion-form option {
     padding: 0.5rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -236,6 +262,81 @@ a img {
 
 .cotizacion-form option:hover {
     background-color: whitesmoke;
+}
+
+
+/*=========================     CARRUSEL    =======================*/
+
+.slider {
+    width: 60%;
+    max-width: 800px;
+    overflow: hidden;
+    position: relative;
+    margin: 60px auto;
+    border-radius: 16px;
+}
+
+/* Degradados suaves en los bordes */
+.slider::before,
+.slider::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 80px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.slider::before {
+    left: 0;
+    background: linear-gradient(to right, #fceede 0%, transparent 100%);
+}
+
+.slider::after {
+    right: 0;
+    background: linear-gradient(to left, #fceede 0%, transparent 100%);
+}
+
+.slide-track {
+    display: flex;
+    animation: slide-animation 91s infinite ease-in-out;
+}
+
+.slide {
+    min-width: 100%; /* Cada slide ocupa el 100% del contenedor slider */
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.slide img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* Animación: cada imagen se muestra 12s (7 imágenes × 13s = 91s total) */
+@keyframes slide-animation {
+    0%, 12% { transform: translateX(0); }
+    14.28%, 26.28% { transform: translateX(-100%); }
+    28.57%, 40.57% { transform: translateX(-200%); }
+    42.85%, 54.85% { transform: translateX(-300%); }
+    57.14%, 69.14% { transform: translateX(-400%); }
+    71.42%, 83.42% { transform: translateX(-500%); }
+    85.71%, 97.71% { transform: translateX(-600%); }
+    100% { transform: translateX(0); }
 }
 
 /*--------------------------------------------------------*/
