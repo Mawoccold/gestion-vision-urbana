@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
@@ -116,56 +119,60 @@ a img {
     font-weight: 500;
 }
 
-/* -------------------- RESPONSIVE PADDING -------------------- */
+/*--------------------- RESEÑAS ---------------------------*/
+
+.reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+    padding: 2rem;
+    margin: 0 auto;
+    width: 60%;
+    height: 400px;
+    background-color: #EEECEE;
+    border: 3px solid rgb(124, 124, 124);
+    border-radius: 10px;
+}
+
+.card {
+  font-family: 'DM Sans', sans-serif;
+  background-color: white;
+  max-width: 500px;
+  padding: 40px;
+  border-radius: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  color: #4a4a4a;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 50px;
+  font-size: 1.05rem;
+}
+
+.card h2 {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #332d2b;
+  margin-bottom: 30px;
+}
+
+.reviews img {
+    display: block;
+    object-fit: cover;
+    max-width: 100%;
+}
 
 /* Móviles pequeños */
-@media (max-width: 600px) {
+@media (max-width: 500px) {
     header, section {
         padding-left: 1rem;
         padding-right: 1rem;
-    }
-
-    .slider {
-        width: 98%;
-    }
-
-    .slider::before,
-    .slider::after {
-        width: 15px;
-        opacity: 0.3;
-    }
-    
-    .slide {
-        padding: 0 3px;
-    }
-    
-    .slide img {
-        border-radius: 8px;
     }
 }
 
 /* Móviles en general */
 @media (max-width: 770px) {
-
-    .slider {
-        width: 95%;
-        margin: 40px auto;
-    }
-    
-    .slider::before,
-    .slider::after {
-        width: 20px;
-        opacity: 0.5;
-    }
-    
-    .slide {
-        padding: 0 5px;
-    }
-    
-    .slide img {
-        max-width: 100%;
-        border-radius: 12px;
-    }
 
     .container {
         flex-direction: column;
@@ -195,6 +202,23 @@ a img {
         max-height: 400px;
         padding: 1rem
     }
+
+    .reviews {
+        width: 95%; /* En móvil casi todo el ancho */
+        padding: 1rem;
+        height: 450px; /* Un poco más de altura por si el texto se alarga */
+    }
+
+    .card {
+        padding: 20px; /* Menos espacio interno para que quepa más texto */
+        border-radius: 25px; /* Bordes un poco menos exagerados para móvil */
+        font-size: 0.95rem; /* Fuente ligeramente más pequeña */
+    }
+
+    .card h2 {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+    }
 }
 
 /* Tablets y pantallas medianas */
@@ -203,21 +227,15 @@ a img {
         padding-left: 2rem;
         padding-right: 2rem;
     }
-    .slider {
-        width: 85%;
+
+    .reviews {
+        width: 85%; /* En tablet el contenedor es más ancho */
+        padding: 1.5rem;
     }
     
-    .slide {
-        padding: 0 15px;
-    }
-    
-    .slide img {
-        max-width: 450px;
-    }
-    
-    .slider::before,
-    .slider::after {
-        width: 60px;
+    .card {
+        padding: 30px;
+        font-size: 1rem;
     }
 }
 
@@ -296,17 +314,17 @@ a img {
 
 /*=========================     CARRUSEL    =======================*/
 
-.slider {
+/* .slider {
     width: 60%;
     max-width: 800px;
     overflow: hidden;
     position: relative;
     margin: 60px auto;
     border-radius: 16px;
-}
+} */
 
 /* Degradados suaves en los bordes */
-.slider::before,
+/* .slider::before,
 .slider::after {
     content: "";
     position: absolute;
@@ -333,7 +351,7 @@ a img {
 }
 
 .slide {
-    min-width: 100%; /* Cada slide ocupa el 100% del contenedor slider */
+    min-width: 100%;
     flex-shrink: 0;
     display: flex;
     justify-content: center;
@@ -344,20 +362,21 @@ a img {
 
 .slide img {
     width: 100%;
-    max-width: 500px;
+    max-width: 100%;
     height: auto;
     border-radius: 16px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease;
+    display: block;
 }
 
 .slide img:hover {
     transform: scale(1.02);
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
-}
+} */
 
 /* Animación: cada imagen se muestra 12s (7 imágenes × 13s = 91s total) */
-@keyframes slide-animation {
+/* @keyframes slide-animation {
     0%, 12% { transform: translateX(0); }
     14.28%, 26.28% { transform: translateX(-100%); }
     28.57%, 40.57% { transform: translateX(-200%); }
@@ -366,7 +385,7 @@ a img {
     71.42%, 83.42% { transform: translateX(-500%); }
     85.71%, 97.71% { transform: translateX(-600%); }
     100% { transform: translateX(0); }
-}
+} */
 
 /*--------------------------------------------------------*/
 
