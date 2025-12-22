@@ -204,9 +204,9 @@ a img {
     }
 
     .reviews {
-        width: 95%; /* En móvil casi todo el ancho */
+        width: 90%; /* En móvil casi todo el ancho */
         padding: 1rem;
-        height: 450px; /* Un poco más de altura por si el texto se alarga */
+        height: 400px; /* Un poco más de altura por si el texto se alarga */
     }
 
     .card {
