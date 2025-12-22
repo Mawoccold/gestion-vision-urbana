@@ -172,34 +172,10 @@ a img {
         padding-left: 1rem;
         padding-right: 1rem;
     }
-    /* El contenedor ahora ocupa casi todo el ancho */
-    .reviews {
-        width: 92%; 
-        padding: 1rem 0.5rem; /* Reducimos padding lateral del contenedor */
-        height: 450px; /* Un poco más de alto para el scroll */
-    }
-
-    .card {
-        width: 90%;      /* La tarjeta se adapta al ancho disponible */
-        padding: 25px 15px; /* Reducimos mucho el padding lateral */
-        border-radius: 25px; /* Bordes menos pronunciados para ganar espacio */
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Sombra más ligera */
-    }
-
-    .card h2 {
-        font-size: 1.05rem; /* Título un poco más pequeño */
-        margin-bottom: 20px;
-        line-height: 1.3;
-    }
-
-    .card p {
-        font-size: 0.9rem; /* Texto más pequeño para que quepa más contenido */
-        line-height: 1.5;
-    }
 }
 
 /* Móviles en general */
-@media (min-width: 501px) and (max-width: 770px) {
+@media (max-width: 770px) {
 
     .container {
         flex-direction: column;
