@@ -120,49 +120,75 @@ a img {
 }
 
 /*--------------------- RESEÑAS ---------------------------*/
-
-.reviews {
+.reviews-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    overflow-y: scroll;
-    padding: 2rem;
+    justify-content: center;
+    gap: 20px;
+    width: 80%;
     margin: 0 auto;
-    width: 60%;
-    height: 400px;
-    background-color: #EEECEE;
-    border: 3px solid rgb(124, 124, 124);
-    border-radius: 10px;
 }
+
+.reviews-viewport {
+    width: 100%;
+    max-width: 600px;
+    max-height: 600px;
+    overflow: hidden; /* IMPORTANTE: Descomenta esto para esconder las demás cards */
+    border-radius: 10px;
+    position: relative;
+}
+
+.reviews-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    /* transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); */
+    transition: transform 0.5s ease-out;
+    /* transition: transform 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.30); */
+    height: 100%;
+}
+
 
 .card {
-  font-family: 'DM Sans', sans-serif;
-  background-color: white;
-  max-width: 500px;
-  padding: 40px;
-  border-radius: 40px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  text-align: center;
-  color: #4a4a4a;
-  font-weight: 400;
-  line-height: 1.6;
-  margin-bottom: 50px;
-  font-size: 1.05rem;
+    max-width: 600px;
+    margin-right: 30px;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+    background-color: white;
+    padding: 40px;
+    border-radius: 40px;
+    text-align: center;
+    color: #4a4a4a;
+    height: 100%;
+    overflow-y: auto;
+    
+    /* IMPORTANTE: Resetear el comportamiento flex */
+    display: block; /* O usa 'display: flex' con flex-direction: column */
+    white-space: normal;
+    word-wrap: break-word;
 }
 
-.card h2 {
-  font-weight: 700;
-  font-size: 1.2rem;
-  color: #332d2b;
-  margin-bottom: 30px;
+.card:last-child {
+    margin-right: 0; /* La última card no necesita margen */
 }
 
-.reviews img {
-    display: block;
-    object-fit: cover;
-    max-width: 100%;
+/* Estilo simple para los botones */
+.nav-btn {
+    background: #7a5448;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    flex-shrink: 0; /* Evita que los botones se aplasten si la tarjeta es grande */
+    z-index: 10;    /* Asegura que los botones estén sobre cualquier otro elemento */
+    cursor: pointer;
 }
 
+.nav-btn:hover { background: #847171; }
 
 /*--------------- RESPONSIVE -----------------------*/
 
@@ -172,55 +198,66 @@ a img {
         padding-left: 1rem;
         padding-right: 1rem;
     }
+
+    /* Ajuste extra para tarjetas muy pequeñas */
+    .card {
+        padding: 15px;
+        font-size: 0.9rem;
+        border-radius: 20px; /* Bordes más suaves en pantallas mini */
+    }
 }
 
-/* Móviles en general */
+/* Móviles en general (hasta 770px) */
 @media (max-width: 770px) {
-
     .container {
         flex-direction: column;
         align-items: center;
         gap: 15px;
-        padding: 1rem; /* Menos padding en móviles */
+        padding: 1rem;
     }
 
     .item {
-        max-width: 100%; /* Ocupa todo el ancho disponible */
-        min-width: unset; /* Elimina el mínimo de 300px */
-        width: 100%; /* Asegura que ocupe todo el contenedor */
-        margin: 0.5rem 0; /* Menos margen vertical */
+        max-width: 100%;
+        min-width: unset;
+        width: 100%;
+        margin: 0.5rem 0;
+        padding: 1.5rem;
+        font-size: 1rem;
     }
 
     .item img {
-        height: 150px; /* Altura ligeramente menor para móviles */
-    }
-
-    .item {
-        padding: 1.5rem; /* Padding ligeramente menor */
-        font-size: 1rem; /* Tamaño de fuente ligeramente menor */
+        height: 150px;
     }
 
     .banner {
         width: 90%;
         max-height: 400px;
-        padding: 1rem
+        padding: 1rem;
     }
 
-    .reviews {
-        width: 90%; /* En móvil casi todo el ancho */
-        padding: 1rem;
-        height: 400px; /* Un poco más de altura por si el texto se alarga */
+    /* --- RESEÑAS RESPONSIVE --- */
+    .reviews-container {
+        width: 100%; 
+        gap: 5px;   /* Pegamos más los botones a la tarjeta */
+    }
+
+    .reviews-viewport {
+        height: auto;
+        min-height: 300px; 
+        border: none;
+        background-color: transparent; /* Quitamos fondo gris como querías */
     }
 
     .card {
-        padding: 20px; /* Menos espacio interno para que quepa más texto */
-        border-radius: 25px; /* Bordes un poco menos exagerados para móvil */
-        font-size: 0.95rem; /* Fuente ligeramente más pequeña */
+        padding: 20px;
+        font-size: 0.95rem;
+        max-width: 100%; /* Que use todo el espacio del viewport */
     }
 
-    .card h2 {
-        font-size: 1.1rem;
-        margin-bottom: 15px;
+    .nav-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 0.9rem;
     }
 }
 
@@ -231,14 +268,8 @@ a img {
         padding-right: 2rem;
     }
 
-    .reviews {
-        width: 85%; /* En tablet el contenedor es más ancho */
-        padding: 1.5rem;
-    }
-    
-    .card {
-        padding: 30px;
-        font-size: 1rem;
+    .reviews-container {
+        width: 80%; /* Un ancho intermedio */
     }
 }
 
@@ -247,6 +278,11 @@ a img {
     header, section {
         padding-left: 14rem;
         padding-right: 14rem;
+    }
+
+    /* En escritorio mantenemos el ancho que definiste originalmente */
+    .reviews-container {
+        width: 60%;
     }
 }
 
@@ -313,82 +349,6 @@ a img {
 .cotizacion-form option:hover {
     background-color: whitesmoke;
 }
-
-
-/*=========================     CARRUSEL    =======================*/
-
-/* .slider {
-    width: 60%;
-    max-width: 800px;
-    overflow: hidden;
-    position: relative;
-    margin: 60px auto;
-    border-radius: 16px;
-} */
-
-/* Degradados suaves en los bordes */
-/* .slider::before,
-.slider::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    width: 80px;
-    height: 100%;
-    z-index: 2;
-    pointer-events: none;
-}
-
-.slider::before {
-    left: 0;
-    background: linear-gradient(to right, #fceede 0%, transparent 100%);
-}
-
-.slider::after {
-    right: 0;
-    background: linear-gradient(to left, #fceede 0%, transparent 100%);
-}
-
-.slide-track {
-    display: flex;
-    animation: slide-animation 91s infinite ease-in-out;
-}
-
-.slide {
-    min-width: 100%;
-    flex-shrink: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 20px;
-    box-sizing: border-box;
-}
-
-.slide img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    border-radius: 16px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease;
-    display: block;
-}
-
-.slide img:hover {
-    transform: scale(1.02);
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
-} */
-
-/* Animación: cada imagen se muestra 12s (7 imágenes × 13s = 91s total) */
-/* @keyframes slide-animation {
-    0%, 12% { transform: translateX(0); }
-    14.28%, 26.28% { transform: translateX(-100%); }
-    28.57%, 40.57% { transform: translateX(-200%); }
-    42.85%, 54.85% { transform: translateX(-300%); }
-    57.14%, 69.14% { transform: translateX(-400%); }
-    71.42%, 83.42% { transform: translateX(-500%); }
-    85.71%, 97.71% { transform: translateX(-600%); }
-    100% { transform: translateX(0); }
-} */
 
 /*--------------------------------------------------------*/
 

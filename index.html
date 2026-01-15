@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Gestión Visión Urbana</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
 </head>
 <img src="img/Banner-con-logo.png" alt="Imagen representativa" class="banner">
 <body>
@@ -125,115 +126,109 @@
         <p class="title">Testimonios</p>
     </section>
 
-    <div class="reviews">
-        <!-- 1 -->
-        <div class="card">
-            <h2>
-                Tarek Ceriani.- Asesoría.
-            </h2>
-        
-            “ Nuestra experiencia con Gestión Visión Urbana ha sido muy positiva.
-            Lo que más destacamos es su mirada integral, ya que combinan de manera 
-            muy acertada el área de la arquitectura con la abogacía, lo que permite 
-            abordar los proyectos y las inquietudes desde distintos ángulos de forma 
-            transversal. Gracias a esa visión completa pudimos resolver dudas que 
-            en otras instancias hubieran quedado pendientes.
-            <br>
-            <br>
-            Además, valoramos mucho la buena disposición del equipo en todo momento, 
-            siempre atentas a nuestras necesidades, entregando claridad en los procesos 
-            y generando confianza. Esa combinación de profesionalismo, conocimiento 
-            técnico y calidad humana marca una diferencia importante y hace que el 
-            trabajo con ellas sea una experiencia realmente enriquecedora.”
-        </div>
-        <!-- 2 -->
-        <div class="card">
-            <h2>
-                Javiera Gardaix. -Arriendo.
-            </h2>
-        
-            “ Estimadas: Me dirijo a ustedes para expresar mi más sincero agradecimiento 
-            por la excelente atención recibida y  el apoyo brindado en todo el proceso. 
-            Quiero destacar la profesionalidad y amabilidad de su equipo,  Su dedicación 
-            y compromiso con la calidad son verdaderamente admirables.
-            <br>
-            !! Excelente servicio!!
-            <br>
-            Gracias por todo.”
-        </div>
-        <!-- 3 -->
-        <div class="card">
-            <h2>
-                Sergio Muñóz - Posesión Efectiva
-            </h2>
-        
-            “ Estimadas Graciela y Natalia, quiero sinceramente expresarles que gracias a 
-            vuestra labor, profesionalismo y conocimiento del proceso de posesión efectiva, 
-            los que sin duda fueron fundamentales para resolver de forma eficaz el trámite solicitado.
-            <br>
-            <br>
-            Hoy mis hermanos y yo podemos disponer de la herencia que habíamos dado por perdida.
-            Nuestro más profundo agradecimiento por su compromiso, eficiencia  y  dedicación.”
-        </div>
-        <!-- 4 -->
-        <div class="card">
-            <h2>
-                Hugo González.- Arriendo y Redacción de Escritura Pública. 
-            </h2>
-        
-            “ Quisiera agradecer a Graciela y Natalia de Gestión Visión Urbana, ya que ofrecen un 
-            servicio profesional, cercano y acorde a nuestros requerimientos. Nuestra experiencia 
-            fue muy satisfactoria por lo que recomiendo completamente a GVU.”
-        </div>
-        <!-- 5 -->
-        <div class="card">
-            <h2>
-                Carla Fernández. - Informe Técnico
-            </h2>
-        
-            “ Natalia y Graciela son profesionales con experiencia, compromiso y responsabilidad. 
-            Agradecidos del trabajo y servicio realizado, muy eficaces y valioso todo el asesoramiento 
-            brindado por las profesionales.”
-        </div>
-        <!-- 6 -->
-        <div class="card">
-            <h2>
-                Álvaro Lever.- Arriendo.
-            </h2>
-        
-            “ Muy rápido y eficiente servicio. Pude arrendar mi depto casi en tiempo récord. 
-            Las recomiendo totalmente.”
-        </div>
-        <!-- 7 -->
-        <div class="card">
-            <h2>
-                Andrea Bascuñán.-Asesoría Integral y Arriendo. 
-            </h2>
-        
-            “ Natalia y Graciela, han sido profesionales comprometidas, amables y nos han ayudado 
-            a despejar muchas dudas respecto a la gestión  inmobiliaria 
-            Siempre demostrando profesionalismo, amabilidad y compromiso.”
-        </div>
-        <!-- <img src="img/reseñas/1.png">
-        <img src="img/reseñas/2.png">
-        <img src="img/reseñas/3.png">
-        <img src="img/reseñas/4.png">
-        <img src="img/reseñas/5.png">
-        <img src="img/reseñas/6.png">
-        <img src="img/reseñas/7.png"> -->
+    <div class="reviews-container">
+        <button class="nav-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+            <div class="reviews-viewport">
+                <div class="reviews-wrapper" id="slider">
+                    <div class="card">
+                        <h2>
+                            Tarek Ceriani.- Asesoría.
+                        </h2>
+                    
+                        <p>“ Nuestra experiencia con Gestión Visión Urbana ha sido muy positiva.
+                        Lo que más destacamos es su mirada integral, ya que combinan de manera 
+                        muy acertada el área de la arquitectura con la abogacía, lo que permite 
+                        abordar los proyectos y las inquietudes desde distintos ángulos de forma 
+                        transversal. Gracias a esa visión completa pudimos resolver dudas que 
+                        en otras instancias hubieran quedado pendientes.
+                        <br>
+                        <br>
+                        Además, valoramos mucho la buena disposición del equipo en todo momento, 
+                        siempre atentas a nuestras necesidades, entregando claridad en los procesos 
+                        y generando confianza. Esa combinación de profesionalismo, conocimiento 
+                        técnico y calidad humana marca una diferencia importante y hace que el 
+                        trabajo con ellas sea una experiencia realmente enriquecedora.”
+                        </p>
+                    </div>
+                    <!-- 2 -->
+                    <div class="card">
+                        <h2>
+                            Javiera Gardaix. -Arriendo.
+                        </h2>
+                        <p>
+                        “ Estimadas: Me dirijo a ustedes para expresar mi más sincero agradecimiento 
+                        por la excelente atención recibida y  el apoyo brindado en todo el proceso. 
+                        Quiero destacar la profesionalidad y amabilidad de su equipo,  Su dedicación 
+                        y compromiso con la calidad son verdaderamente admirables.
+                        <br>
+                        !! Excelente servicio!!
+                        <br>
+                        Gracias por todo.”
+                        </p>
+                    </div>
+                    <!-- 3 -->
+                    <div class="card">
+                        <h2>
+                            Sergio Muñóz - Posesión Efectiva
+                        </h2>
+                        <p>
+                        “ Estimadas Graciela y Natalia, quiero sinceramente expresarles que gracias a 
+                        vuestra labor, profesionalismo y conocimiento del proceso de posesión efectiva, 
+                        los que sin duda fueron fundamentales para resolver de forma eficaz el trámite solicitado.
+                        <br>
+                        <br>
+                        Hoy mis hermanos y yo podemos disponer de la herencia que habíamos dado por perdida.
+                        Nuestro más profundo agradecimiento por su compromiso, eficiencia  y  dedicación.”
+                        </p>
+                    </div>
+                    <!-- 4 -->
+                    <div class="card">
+                        <h2>
+                            Hugo González.- Arriendo y Redacción de Escritura Pública. 
+                        </h2>
+                        <p>
+                        “ Quisiera agradecer a Graciela y Natalia de Gestión Visión Urbana, ya que ofrecen un 
+                        servicio profesional, cercano y acorde a nuestros requerimientos. Nuestra experiencia 
+                        fue muy satisfactoria por lo que recomiendo completamente a GVU.”
+                        </p>
+                    </div>
+                    <!-- 5 -->
+                    <div class="card">
+                        <h2>
+                            Carla Fernández. - Informe Técnico
+                        </h2>
+                        <p>
+                        “ Natalia y Graciela son profesionales con experiencia, compromiso y responsabilidad. 
+                        Agradecidos del trabajo y servicio realizado, muy eficaces y valioso todo el asesoramiento 
+                        brindado por las profesionales.”
+                        </p>
+                    </div>
+                    <!-- 6 -->
+                    <div class="card">
+                        <h2>
+                            Álvaro Lever.- Arriendo.
+                        </h2>
+                        <p>
+                        “ Muy rápido y eficiente servicio. Pude arrendar mi depto casi en tiempo récord. 
+                        Las recomiendo totalmente.”
+                        </p>
+                    </div>
+                    <!-- 7 -->
+                    <div class="card">
+                        <h2>
+                            Andrea Bascuñán.-Asesoría Integral y Arriendo. 
+                        </h2>
+                        <p>
+                        “ Natalia y Graciela, han sido profesionales comprometidas, amables y nos han ayudado 
+                        a despejar muchas dudas respecto a la gestión  inmobiliaria 
+                        Siempre demostrando profesionalismo, amabilidad y compromiso.”
+                        </p>
+                    </div>
+                </div>
+            </div>
+        <button class="nav-btn next" onclick="moveSlide(1)">&#10095;</button>
     </div>
 
-    <!-- <div class="slider">
-        <div class="slide-track">
-            <div class="slide"><img src="img/reseñas/1.png" alt="Reseña Tarek"></div>
-            <div class="slide"><img src="img/reseñas/2.png" alt="Reseña Javiera"></div>
-            <div class="slide"><img src="img/reseñas/3.png" alt="Reseña Sergio"></div>
-            <div class="slide"><img src="img/reseñas/4.png" alt="Reseña Hugo"></div>
-            <div class="slide"><img src="img/reseñas/5.png" alt="Reseña Carla"></div>
-            <div class="slide"><img src="img/reseñas/6.png" alt="Reseña Álvaro"></div>
-            <div class="slide"><img src="img/reseñas/7.png" alt="Reseña Andrea"></div>
-        </div>
-    </div> -->
 
 
     <section style="padding-bottom:3rem;">
@@ -274,5 +269,6 @@
         <img src="img/facebook-icon.png" alt="facebook logo"></a>
         <p>© 2025 Gestión Vision Urbana</p>
     </footer>
+
 </body>
 </html>
