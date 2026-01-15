@@ -205,11 +205,11 @@ a img {
     }
     
     .reviews-viewport {
-        max-width: 400px
+        max-width: 350px
     }
     
     .card {
-        max-width: 400px;
+        max-width: 350px;
         padding: 15px;
         border-radius: 25px;
         font-size: 0.9rem;
