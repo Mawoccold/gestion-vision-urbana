@@ -201,44 +201,36 @@ a img {
     /* --- RESEÑAS RESPONSIVE --- */
     .reviews-container {
         width: 95%;
-        gap: 15px;
-        flex-direction: column; /* Cambia a columna */
+        gap: 8px;
+        /* flex-direction: column; */
     }
     
-    /* Contenedor de botones horizontal */
-    .reviews-container::after {
-        content: '';
-        display: flex;
-        gap: 20px;
-    }
-    /* Ahora sí puede ser 100% */
+    /* Si prefieres mantener botones a los lados, comenta la línea anterior */
+    
     .reviews-viewport {
-        max-width: 95%;
+        max-width: 100%;
         max-height: 450px;
-        /* order: 1; */
-    }
-    /* Botón anterior primero */
-    /* .nav-btn.prev {
-        order: 0; 
-    } */
-    
-    /* Botón siguiente al final */
-    /* .nav-btn.next {
-        order: 2; 
-    } */
-
-    /* O si prefieres los botones juntos abajo: */
-    .nav-btn {
-        width: 40px;
-        height: 40px;
-        font-size: 1rem;
     }
     
     .card {
         max-width: 100%;
         padding: 25px 20px;
-        margin-right: 15px;
         border-radius: 25px;
+        font-size: 0.9rem;
+    }
+    
+    .card h2 {
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+    }
+    
+    .card br {
+        display: none; /* Opcional: elimina saltos de línea extra en móviles */
+    }
+    
+    .nav-btn {
+        width: 34px;
+        height: 34px;
         font-size: 0.9rem;
     }
 }
@@ -285,7 +277,6 @@ a img {
     .card {
         max-width: 450px;
         padding: 30px;
-        margin-right: 20px;
         border-radius: 30px;
         font-size: 0.95rem;
     }
@@ -323,7 +314,6 @@ a img {
     .card {
         max-width: 500px;
         padding: 35px;
-        margin-right: 25px;
         border-radius: 35px;
     }
     
