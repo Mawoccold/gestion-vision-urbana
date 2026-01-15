@@ -133,7 +133,6 @@ a img {
 .reviews-viewport {
     width: 100%;
     max-width: 600px;
-    max-height: 600px;
     overflow: hidden; /* IMPORTANTE: Descomenta esto para esconder las demás cards */
     border-radius: 10px;
     position: relative;
@@ -199,11 +198,41 @@ a img {
         padding-right: 1rem;
     }
 
-    /* Ajuste extra para tarjetas muy pequeñas */
+    /* --- RESEÑAS RESPONSIVE --- */
+    .reviews-container {
+        width: 95%;
+        gap: 8px;
+        /* flex-direction: column; */
+    }
+    
+    /* Si prefieres mantener botones a los lados, comenta la línea anterior */
+    
+    .reviews-viewport {
+        max-width: 100%;
+        max-height: 450px;
+    }
+    
     .card {
-        padding: 15px;
+        max-width: 100%;
+        padding: 25px 20px;
+        margin-right: 15px;
+        border-radius: 25px;
         font-size: 0.9rem;
-        border-radius: 20px; /* Bordes más suaves en pantallas mini */
+    }
+    
+    .card h2 {
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+    }
+    
+    .card br {
+        display: none; /* Opcional: elimina saltos de línea extra en móviles */
+    }
+    
+    .nav-btn {
+        width: 34px;
+        height: 34px;
+        font-size: 0.9rem;
     }
 }
 
@@ -237,27 +266,32 @@ a img {
 
     /* --- RESEÑAS RESPONSIVE --- */
     .reviews-container {
-        width: 100%; 
-        gap: 5px;   /* Pegamos más los botones a la tarjeta */
+        width: 90%;
+        gap: 10px;
     }
-
+    
     .reviews-viewport {
-        height: auto;
-        min-height: 300px; 
-        border: none;
-        background-color: transparent; /* Quitamos fondo gris como querías */
+        max-width: 450px;
+        max-height: 500px;
     }
-
+    
     .card {
-        padding: 20px;
+        max-width: 450px;
+        padding: 30px;
+        margin-right: 20px;
+        border-radius: 30px;
         font-size: 0.95rem;
-        max-width: 100%; /* Que use todo el espacio del viewport */
     }
-
+    
+    .card h2 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+    
     .nav-btn {
-        width: 30px;
-        height: 30px;
-        font-size: 0.9rem;
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
     }
 }
 
@@ -268,8 +302,32 @@ a img {
         padding-right: 2rem;
     }
 
+    /* --- RESEÑAS RESPONSIVE --- */
     .reviews-container {
-        width: 80%; /* Un ancho intermedio */
+        width: 85%;
+        gap: 15px;
+    }
+    
+    .reviews-viewport {
+        max-width: 500px;
+        max-height: 550px;
+    }
+    
+    .card {
+        max-width: 500px;
+        padding: 35px;
+        margin-right: 25px;
+        border-radius: 35px;
+    }
+    
+    .card h2 {
+        font-size: 1.4rem;
+    }
+    
+    .nav-btn {
+        width: 38px;
+        height: 38px;
+        font-size: 1.1rem;
     }
 }
 
@@ -278,11 +336,6 @@ a img {
     header, section {
         padding-left: 14rem;
         padding-right: 14rem;
-    }
-
-    /* En escritorio mantenemos el ancho que definiste originalmente */
-    .reviews-container {
-        width: 60%;
     }
 }
 
