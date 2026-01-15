@@ -201,14 +201,11 @@ a img {
     /* --- RESEÑAS RESPONSIVE --- */
     .reviews-container {
         width: 95%;
-        gap: 8px;
-        /* flex-direction: column; */
+        gap: 5px;
     }
     
-    /* Si prefieres mantener botones a los lados, comenta la línea anterior */
-    
     .reviews-viewport {
-        max-width: 100%;
+        max-width: calc(100% - 80px); /* Deja espacio para botones */
         max-height: 450px;
     }
     
@@ -217,6 +214,7 @@ a img {
         padding: 25px 20px;
         border-radius: 25px;
         font-size: 0.9rem;
+        /* margin-right sigue siendo 30px */
     }
     
     .card h2 {
@@ -224,13 +222,9 @@ a img {
         margin-bottom: 12px;
     }
     
-    .card br {
-        display: none; /* Opcional: elimina saltos de línea extra en móviles */
-    }
-    
     .nav-btn {
-        width: 34px;
-        height: 34px;
+        width: 32px;
+        height: 32px;
         font-size: 0.9rem;
     }
 }
@@ -279,6 +273,7 @@ a img {
         padding: 30px;
         border-radius: 30px;
         font-size: 0.95rem;
+        /* margin-right sigue siendo 30px */
     }
     
     .card h2 {
@@ -315,6 +310,7 @@ a img {
         max-width: 500px;
         padding: 35px;
         border-radius: 35px;
+        /* margin-right sigue siendo 30px */
     }
     
     .card h2 {
