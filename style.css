@@ -228,6 +228,8 @@ a img {
     }
 }
 
+/*------------- ESTE ES DE MI CELU ------------------*/
+
 /* Móviles en general (hasta 770px) */
 @media (max-width: 770px) {
     .container {
@@ -258,31 +260,32 @@ a img {
 
     /* --- RESEÑAS RESPONSIVE --- */
     .reviews-container {
-        width: 90%;
-        gap: 10px;
+        width: 100%;
+        gap: 5px;
     }
     
     .reviews-viewport {
-        max-width: 450px;
+        max-width: calc(100% - 100px);
+        height: auto;
     }
     
     .card {
-        max-width: 450px;
-        padding: 30px;
-        border-radius: 30px;
+        max-width: 100%;
+        padding: 20px;
+        border-radius: 25px;
         font-size: 0.95rem;
         background-color: red;
     }
     
     .card h2 {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         margin-bottom: 15px;
     }
     
     .nav-btn {
-        width: 36px;
-        height: 36px;
-        font-size: 1rem;
+        width: 30px;
+        height: 30px;
+        font-size: 0.9rem;
     }
 }
 
