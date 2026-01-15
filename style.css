@@ -229,6 +229,7 @@ a img {
 }
 
 /*------------- ESTE ES DE MI CELU ------------------*/
+/*------------- TAMBIEN EL DE LAS CHICAS ------------------*/
 
 /* Móviles en general (hasta 770px) */
 @media (max-width: 770px) {
@@ -274,7 +275,6 @@ a img {
         padding: 20px;
         border-radius: 25px;
         font-size: 0.95rem;
-        background-color: red;
     }
     
     .card h2 {
@@ -310,7 +310,6 @@ a img {
         max-width: 500px;
         padding: 35px;
         border-radius: 35px;
-        background-color: blue;
     }
     
     .card h2 {
@@ -329,10 +328,6 @@ a img {
     header, section {
         padding-left: 14rem;
         padding-right: 14rem;
-    }
-
-    card{
-        background-color: orange;
     }
 }
 
