@@ -330,6 +330,10 @@ a img {
         padding-left: 14rem;
         padding-right: 14rem;
     }
+
+    card{
+        background-color: orange;
+    }
 }
 
 /* -------------------- FORMULARIO DE CONTACTO -------------------- */
